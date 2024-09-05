@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Canvas, Textbox, Circle, Rect, Triangle, Image } from 'fabric';
 
-const CanvasEdit = ({ selectedImage }) => {
+const CanvasEditor = ({ selectedImage }) => {
   const [canvas, setCanvas] = useState(null);
 
   useEffect(() => {
@@ -31,7 +31,9 @@ const CanvasEdit = ({ selectedImage }) => {
   }, [selectedImage, canvas]);
 
   const addText = () => {
+   
     if (canvas) {
+     
       const textbox = new Textbox('Edit Me', {
         left: 50,
         top: 50,
@@ -118,4 +120,4 @@ const CanvasEdit = ({ selectedImage }) => {
   );
 };
 
-export default CanvasEdit;
+export default CanvasEditor;
